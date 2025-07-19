@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  # MongoDB service
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    restart: unless-stopped
+
+  # Qdrant service
+  qdrant:
+    image: qdrant/qdrant:latest
+    ports:
+      - "6333:6333"  # REST API
+      - "6334:6334"  # gRPC API
+    volumes:
+      - qdrant_data:/qdrant/storage
+    environment:
+      - QDRANT_ALLOW_CREATION_ON_FILE_NOT_FOUND=true
+    restart: unless-stopped
+
+  # Open Responses service (depends on mongo and qdrant)
+  open-responses:
+    image: masaicai/open-responses:latest
+    ports:
+      - "6644:6644"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - SPRING_PROFILES_ACTIVE=platform
+      - OPEN_RESPONSES_STORE_VECTOR_SEARCH_QDRANT_HOST=qdrant
+      - OPEN_RESPONSES_MONGODB_URI=mongodb://mongo:27017
+    depends_on:
+      - mongo
+      - qdrant
+    restart: unless-stopped
+
+  # Platform UI service (depends on open-responses)
+  platform-ui:
+    image: masaicai/platform-ui:latest
+    ports:
+      - "6645:80"
+    environment:
+      - VITE_DASHBOARD_API_URL=http://localhost:6644
+    depends_on:
+      - open-responses
+    restart: unless-stopped
+
+volumes:
+  mongo_data:
+  qdrant_data: 
