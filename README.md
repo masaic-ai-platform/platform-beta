@@ -70,7 +70,9 @@ docker-compose --profile full down
 ```
 
 ---
+
 # Use Cases
+
 ## 1. Ecommerce: Product Search and Add to Cart in One Shot (Grok4)
 
 ![Ecommerce Demo](demos/Shopping-DemoWith-Grok.gif)
@@ -91,6 +93,29 @@ https://allbirds.com/api/mcp
 ```bash
 Add men's black runner jet black, black sole of size 9 in the cart.
 ```
+
+---
+
+## 2. File Search Tool, In-Built RAG
+
+<video src="demos/File-Search-Demo.mp4" controls width="600"></video>
+
+**System Prompt:**
+```bash
+Use file search tool to frame your answers
+```
+
+**On File Search Tool Modal:**
+1. Create vector store, using '+' icon.
+2. Select embedding model.
+3. Upload file to store.
+4. Select store and file and generate embeddings using 'Associate File CTA'
+5. Select vector store and save the tool
+
+
+**Sample Query:**
+Ask relevant query which will invoke file search tool.
+
 
 ---
 
