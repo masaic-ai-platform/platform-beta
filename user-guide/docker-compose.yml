@@ -12,6 +12,8 @@ services:
     profiles:
       - mongo
       - full
+    networks:
+      - platform
 
   # Qdrant service (only when using internal Qdrant)
   qdrant:
@@ -27,6 +29,8 @@ services:
     profiles:
       - qdrant
       - full
+    networks:
+      - platform
 
   # Open Responses service (default mode - no external databases)
   open-responses:
@@ -39,6 +43,8 @@ services:
     profiles:
       - default
       - ""
+    networks:
+      - platform
 
   # Open Responses service (with vector search enabled)
   open-responses-vector:
@@ -57,6 +63,8 @@ services:
     restart: unless-stopped
     profiles:
       - qdrant
+    networks:
+      - platform
 
   # Open Responses service (with MongoDB enabled)
   open-responses-mongo:
@@ -73,6 +81,8 @@ services:
     restart: unless-stopped
     profiles:
       - mongo
+    networks:
+      - platform
 
   # Open Responses service (with both vector search and MongoDB)
   open-responses-full:
@@ -97,6 +107,8 @@ services:
     restart: unless-stopped
     profiles:
       - full
+    networks:
+      - platform
 
   # Open Responses service (external databases - no dependencies)
   open-responses-external:
@@ -118,6 +130,8 @@ services:
     restart: unless-stopped
     profiles:
       - external
+    networks:
+      - platform
 
   # Platform UI service (for all modes)
   platform-ui:
@@ -134,7 +148,12 @@ services:
       - full
       - external
       - ""
+    networks:
+      - platform
 
 volumes:
   mongo_data:
-  qdrant_data: 
+  qdrant_data:
+
+networks:
+  platform: 
