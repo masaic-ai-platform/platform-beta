@@ -97,8 +97,7 @@ Add men's black runner jet black, black sole of size 9 in the cart.
 ---
 
 ## 2. File Search Tool, In-Built RAG
-
-<video src="demos/File-Search-Demo.mp4" controls width="600"></video>
+![Ecommerce Demo](demos/File-Search-Demo.gif)
 
 **System Prompt:**
 ```bash
