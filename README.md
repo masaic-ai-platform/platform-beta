@@ -97,7 +97,8 @@ Add men's black runner jet black, black sole of size 9 in the cart.
 ---
 
 ## 2. File Search Tool, In-Built RAG
-![Ecommerce Demo](demos/File-Search-Demo.gif)
+
+![File Search Demo](demos/File-Search-Demo.gif)
 
 **System Prompt:**
 ```bash
@@ -105,16 +106,23 @@ Use file search tool to frame your answers
 ```
 
 **On File Search Tool Modal:**
+
 1. Create vector store, using '+' icon.
 2. Select embedding model.
 3. Upload file to store.
 4. Select store and file and generate embeddings using 'Associate File CTA'
 5. Select vector store and save the tool
 
-
 **Sample Query:**
 Ask relevant query which will invoke file search tool.
 
+---
+
+## 3. Generating Mock Tools Using Masaic Mocky
+
+![Mocky Demo](demos/Mocky.gif)
+
+Once a mock is generated, create an MCP server and then use the MCP server to create a simulation.
 
 ---
 
