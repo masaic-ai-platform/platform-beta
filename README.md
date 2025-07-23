@@ -71,6 +71,61 @@ docker-compose --profile full down
 
 ---
 
+# Use Cases
+
+## 1. Ecommerce: Product Search and Add to Cart in One Shot (Grok4)
+
+![Ecommerce Demo](demos/Shopping-DemoWith-Grok.gif)
+
+**System Prompt:**
+```bash
+1. Use all birds tool for product search and update cart.
+2. Return image URL in a proper markdown format.
+3. Whenever you update cart, share checkout link also.
+```
+
+**MCP Server:**
+```bash
+https://allbirds.com/api/mcp
+```
+
+**Sample Query:**
+```bash
+Add men's black runner jet black, black sole of size 9 in the cart.
+```
+
+---
+
+## 2. File Search Tool, In-Built RAG
+
+![File Search Demo](demos/File-Search-Demo.gif)
+
+**System Prompt:**
+```bash
+Use file search tool to frame your answers
+```
+
+**On File Search Tool Modal:**
+
+1. Create vector store, using '+' icon.
+2. Select embedding model.
+3. Upload file to store.
+4. Select store and file and generate embeddings using 'Associate File CTA'
+5. Select vector store and save the tool
+
+**Sample Query:**
+Ask relevant query which will invoke file search tool.
+
+---
+
+## 3. Generating Mock Tools Using Masaic Mocky
+
+![Mocky Demo](demos/Mocky.gif)
+
+Once a mock is generated, create an MCP server and then use the MCP server to create a simulation.
+
+---
+
 ## Configure Environment Variables
 
 > **Note:** You only need to configure these variables if you want to connect to existing (external) services like Qdrant or MongoDB, or override the defaults.
