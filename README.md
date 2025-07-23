@@ -70,6 +70,29 @@ docker-compose --profile full down
 ```
 
 ---
+# Use Cases
+## 1. Ecommerce: Product Search and Add to Cart in One Shot (Grok4)
+
+![Ecommerce Demo](demos/Shopping-DemoWith-Grok.gif)
+
+**System Prompt:**
+```bash
+1. Use all birds tool for product search and update cart.
+2. Return image URL in a proper markdown format.
+3. Whenever you update cart, share checkout link also.
+```
+
+**MCP Server:**
+```bash
+https://allbirds.com/api/mcp
+```
+
+**Sample Query:**
+```bash
+Add men's black runner jet black, black sole of size 9 in the cart.
+```
+
+---
 
 ## Configure Environment Variables
 
