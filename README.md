@@ -13,14 +13,14 @@
 
 ## Deployment Modes
 
-| Mode | Profile(s) | Services | Use Case |
-|------|------------|----------|----------|
-| 1. Default | `default` | open-responses, platform-ui | Basic local testing |
-| 2. Qdrant | `qdrant` | open-responses-vector, qdrant, platform-ui | Vector search with Qdrant |
-| 3. MongoDB | `mongo` | open-responses-mongo, mongo, platform-ui | Persistence with MongoDB |
-| 4. Full | `full` | open-responses-full, mongo, qdrant, platform-ui | Full stack (vector + persistence) |
-| 5. External | `external` | open-responses-external, platform-ui | Use external Qdrant/MongoDB |
-| 6. Hybrid | `mongo,external` or `qdrant,external` | Mix of internal/external DBs | Custom hybrid setup |
+| Mode | Profile(s) | Services | Use Case                                        |
+|------|------------|----------|-------------------------------------------------|
+| 1. Default | `default` | open-responses, platform-ui | Basic local testing                             |
+| 2. Qdrant | `qdrant` | open-responses-vector, qdrant, platform-ui | Vector search with Qdrant                       |
+| 3. MongoDB | `mongo` | open-responses-mongo, mongo, platform-ui | chat messages persistence with MongoDB          |
+| 4. Full | `full` | open-responses-full, mongo, qdrant, platform-ui | Full stack (vector + chat messages persistence) |
+| 5. External | `external` | open-responses-external, platform-ui | Use external Qdrant/MongoDB                     |
+| 6. Hybrid | `mongo,external` or `qdrant,external` | Mix of internal/external DBs | Custom hybrid setup                             |
 
 ---
 
@@ -68,6 +68,12 @@ docker-compose down
 docker-compose --profile full down
 # ...etc.
 ```
+
+---
+
+## 📝 Feedback
+
+We'd love to hear your feedback! Please take a moment to fill out our [feedback form](https://forms.gle/yBi9JuyCVbKYBRZS9) - it takes less than 4 minutes.
 
 ---
 
