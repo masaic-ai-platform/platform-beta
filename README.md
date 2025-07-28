@@ -87,7 +87,7 @@ We'd love to hear your feedback! Please take a moment to fill out our [feedback 
 2. Built-in model connectivity test runs.
 3. Save model and use it to build use cases.
 
-## 1. Ecommerce: Product Search and Add to Cart in One Shot (Grok4)
+## 2. Ecommerce: Product Search and Add to Cart in One Shot (Grok4)
 
 ![Ecommerce Demo](demos/Shopping-DemoWith-Grok.gif)
 
@@ -110,7 +110,7 @@ Add men's black runner jet black, black sole of size 9 in the cart.
 
 ---
 
-## 2. File Search Tool, In-Built RAG
+## 3. File Search Tool, In-Built RAG
 
 ![File Search Demo](demos/File-Search-Demo.gif)
 
@@ -132,7 +132,7 @@ Ask relevant query which will invoke file search tool.
 
 ---
 
-## 3. Generating Mock Tools Using Masaic Mocky
+## 4. Generating Mock Tools Using Masaic Mocky
 
 ![Mocky Demo](demos/Mocky.gif)
 
