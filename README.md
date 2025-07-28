@@ -79,6 +79,14 @@ We'd love to hear your feedback! Please take a moment to fill out our [feedback 
 
 # Use Cases
 
+## 1. Add Model: Add your own model with built-in test
+
+![Add Model Demo](demos/Add-Model-Fast.gif)
+**Steps**
+1. Add model base url, example: if /chat/completions is available at http://example.com/v1/chat/completions then add http://example.com/v1
+2. Built-in model connectivity test runs.
+3. Save model and use it to build use cases.
+
 ## 1. Ecommerce: Product Search and Add to Cart in One Shot (Grok4)
 
 ![Ecommerce Demo](demos/Shopping-DemoWith-Grok.gif)
